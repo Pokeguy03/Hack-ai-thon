@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AR/VR Career Experiences - One-Stop Career & Education Advisor</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="arvr.css" />
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-vr-cardboard"></i> AR/VR Experiences</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aptitude.html">Test</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="blockchain.html">Blockchain</a>
+        <a href="arvr.html" class="active">AR/VR</a>
+        <a href="#contact">Contact</a>
+        <a href="rewards.html">Rewards</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="user-profile">
+          <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+          <span id="user-name">Student</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero arvr-hero">
+    <div class="hero-content">
+      <h2 class="hero-title">
+        <span class="title-line">Step into the Future.</span>
+        <span class="title-line">Experience Careers in VR.</span>
+      </h2>
+      <p class="hero-subtitle">
+        Explore immersive AR/VR career simulations and discover your passion through virtual experiences
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== AR/VR SIMULATIONS SECTION ===== -->
+  <section class="arvr-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore Careers in Immersive AR/VR</h2>
+        <p>Interact with virtual environments and simulations to experience real-world career tasks, labs, and scenarios. Click on a simulation to launch it in immersive mode.</p>
+      </div>
+
+      <div class="arvr-container" id="arvrContainer">
+        <!-- AR/VR simulation cards will be injected here by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-graduation-cap"></i> Career Advisor</h3>
+        <p>Empowering students with AI-powered career guidance and personalized learning experiences.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aptitude.html">Aptitude Test</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="arvr.html">AR/VR</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#help">Help Center</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> info@careeradvisor.ai</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 One-Stop Career & Education Advisor | Designed by Gurunath M</p>
+    </div>
+  </footer>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="arvr.js"></script>
+  <script src="gamification.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Theme Toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const icon = document.querySelector('#theme-toggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+  </script>
+
+</body>
+<script>
+    // Sample AR/VR career simulations
+const simulations = [
+  {
+    title: "Virtual Lab: Chemistry",
+    description: "Perform experiments in a virtual chemistry lab safely and interactively.",
+    image: "https://i.ibb.co/5r5jZkK/chemistry-lab.jpg",
+    link: "#"
+  },
+  {
+    title: "Mechanical Workshop Simulation",
+    description: "Experience real-world mechanical engineering tasks in VR.",
+    image: "https://i.ibb.co/6D7YxQV/mechanical-vr.jpg",
+    link: "#"
+  },
+  {
+    title: "Medical Surgery Simulation",
+    description: "Practice surgical procedures in a safe, immersive environment.",
+    image: "https://i.ibb.co/fq2v1RB/medical-vr.jpg",
+    link: "#"
+  },
+  {
+    title: "Construction & Architecture VR",
+    description: "Interact with building designs and architecture projects in 3D.",
+    image: "https://i.ibb.co/k89zG7F/architecture-vr.jpg",
+    link: "#"
+  }
+];
+
+// Populate AR/VR simulations
+function populateSimulations() {
+  const container = document.getElementById("arvrContainer");
+
+  simulations.forEach(sim => {
+    const card = document.createElement("div");
+    card.classList.add("sim-card");
+
+    card.innerHTML = `
+      <img src="${sim.image}" alt="${sim.title}">
+      <h3>${sim.title}</h3>
+      <p>${sim.description}</p>
+      <button onclick="launchSimulation('${sim.link}', '${sim.title}')">Launch Simulation</button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Placeholder function to launch simulation
+function launchSimulation(link, simTitle) {
+  alert(`🎉 You completed the simulation: ${simTitle}\nYou earned 40 points!`);
+  
+  // Award points via central gamification system
+  addPoints(`AR/VR simulation completed: ${simTitle}`, 40);
+  
+  // Simulate launching the VR experience
+  console.log("Launching simulation link:", link);
+}
+
+
+// Initialize page
+document.addEventListener("DOMContentLoaded", populateSimulations);
+card.innerHTML = `
+  <img src="${sim.image}" alt="${sim.title}">
+  <h3>${sim.title}</h3>
+  <p>${sim.description}</p>
+  <button onclick="launchSimulation('${sim.link}', '${sim.title}')">Launch Simulation</button>
+`;
+
+
+</script>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards Store - One-Stop Career & Education Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-gift"></i> Rewards Store</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="aptitude.html">Test</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="blockchain.html">Blockchain</a>
+                <a href="arvr.html">AR/VR</a>
+                <a href="#contact">Contact</a>
+                <a href="rewards.html" class="active">Rewards</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-profile">
+                    <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+                    <span id="user-name">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="rewards-container">
+        <!-- Rewards Overview -->
+        <section class="rewards-overview">
+            <div class="overview-header">
+                <h2>Your Rewards Dashboard</h2>
+                <p>Earn points, unlock achievements, and redeem amazing rewards!</p>
+            </div>
+
+            <div class="overview-stats">
+                <div class="points-display">
+                    <div class="points-circle">
+                        <div class="points-inner">
+                            <h3 id="total-points">0</h3>
+                            <p>Total Points</p>
+                        </div>
+                        <svg class="points-ring" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                    </div>
+                    <div class="points-breakdown">
+                        <div class="points-item">
+                            <span class="points-label">Available for Redemption</span>
+                            <span class="points-amount" id="available-points">0</span>
+                        </div>
+                        <div class="points-item">
+                            <span class="points-label">Total Earned</span>
+                            <span class="points-amount" id="total-earned">0</span>
+                        </div>
+                        <div class="points-item">
+                            <span class="points-label">Total Spent</span>
+                            <span class="points-amount" id="total-spent">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-section">
+                    <h3>Achievements Earned</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-brain"></i>
+                            <span>Aptitude Master</span>
+                            <div class="badge-description">Complete all aptitude test categories</div>
+                        </div>
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>VR Explorer</span>
+                            <div class="badge-description">Complete 3 AR/VR simulations</div>
+                        </div>
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Mentor Connect</span>
+                            <div class="badge-description">Attend 5 mentor sessions</div>
+                        </div>
+                        <div class="achievement-badge earned">
+                            <i class="fas fa-trophy"></i>
+                            <span>High Achiever</span>
+                            <div class="badge-description">Score 90%+ on any test</div>
+                        </div>
+                        <div class="achievement-badge locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Blockchain Pro</span>
+                            <div class="badge-description">Complete blockchain certification</div>
+                        </div>
+                        <div class="achievement-badge locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Course Master</span>
+                            <div class="badge-description">Complete 10 courses</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rewards Store -->
+        <section class="rewards-store">
+            <div class="store-header">
+                <h2><i class="fas fa-store"></i> Rewards Store</h2>
+                <div class="store-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-rewards" placeholder="Search rewards...">
+                    </div>
+                    <div class="filter-dropdown">
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="arvr">AR/VR Experiences</option>
+                            <option value="mentorship">Mentorship</option>
+                            <option value="skills">Skill Development</option>
+                            <option value="certificates">Certificates</option>
+                            <option value="premium">Premium Access</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rewards-grid" id="rewards-grid">
+                <!-- Rewards will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Rewards History -->
+        <section class="rewards-history">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> Rewards History</h2>
+                <div class="history-controls">
+                    <button class="btn-filter" data-filter="all">All</button>
+                    <button class="btn-filter" data-filter="earned">Earned</button>
+                    <button class="btn-filter" data-filter="spent">Spent</button>
+                </div>
+            </div>
+
+            <div class="history-timeline" id="history-timeline">
+                <!-- History items will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Reward Detail Modal -->
+    <div id="reward-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Reward Details</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="reward-detail">
+                    <div class="reward-image">
+                        <img id="modal-image" src="" alt="Reward">
+                    </div>
+                    <div class="reward-info">
+                        <h4 id="modal-name">Reward Name</h4>
+                        <p id="modal-description">Reward description</p>
+                        <div class="reward-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-coins"></i>
+                                <span id="modal-points">0 points</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-tag"></i>
+                                <span id="modal-category">Category</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="modal-validity">Valid for 30 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary modal-close">Cancel</button>
+                <button class="btn-primary" id="redeem-btn">Redeem Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="confirmation-title">Confirm Redemption</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <p id="confirmation-message">Are you sure you want to redeem this reward?</p>
+                    <div class="confirmation-details">
+                        <div class="detail-item">
+                            <span>Reward:</span>
+                            <span id="confirmation-reward">VR Lab Access</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Cost:</span>
+                            <span id="confirmation-cost">180 points</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Remaining Points:</span>
+                            <span id="confirmation-remaining">95 points</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancel-redeem">Cancel</button>
+                <button class="btn-primary" id="confirm-redeem">Confirm Redemption</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Toast -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="rewards.js"></script>
+</body>
+</html>

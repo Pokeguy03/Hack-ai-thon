@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Aptitude Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aptitude.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🧠 AI-Powered Aptitude Assessment</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aptitude.html" class="active">Test</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="blockchain.html">Blockchain</a>
+            <a href="arvr.html">AR/VR</a>
+            <a href="#contact">Contact</a>
+            <a href="rewards.html">Rewards</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main id="main-container">
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <div class="welcome-content">
+                <h2>Welcome to Your Career Assessment</h2>
+                <p>Discover your strengths across 5 key areas and get personalized career recommendations.</p>
+                
+                <div class="assessment-overview">
+                    <div class="category-preview">
+                        <h3>📊 Assessment Categories</h3>
+                        <div class="category-grid">
+                            <div class="category-item">
+                                <span class="icon">🧩</span>
+                                <span>Logical Reasoning</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="icon">🔢</span>
+                                <span>Quantitative Ability</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="icon">📝</span>
+                                <span>Verbal Ability</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="icon">💻</span>
+                                <span>Coding/Tech Aptitude</span>
+                            </div>
+                            <div class="category-item">
+                                <span class="icon">👤</span>
+                                <span>Personality & Interests</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="user-info">
+                    <input type="text" id="user-name" placeholder="Enter your name" required>
+                    <select id="user-domain" required>
+                        <option value="">Select your interest domain</option>
+                        <option value="AI Engineer">AI Engineer</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="Data Scientist">Data Scientist</option>
+                        <option value="Cybersecurity Analyst">Cybersecurity Analyst</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <button id="start-assessment" class="btn-primary">Start Assessment</button>
+            </div>
+        </section>
+
+        <!-- Category Selection -->
+        <section id="category-screen" class="screen">
+            <div class="category-header">
+                <h2>Choose Assessment Categories</h2>
+                <p>Select the areas you'd like to be tested on. You can choose multiple categories.</p>
+            </div>
+
+            <div class="category-selection">
+                <div class="category-card" data-category="logical">
+                    <div class="category-icon">🧩</div>
+                    <h3>Logical Reasoning</h3>
+                    <p>Puzzles, pattern recognition, sequences</p>
+                    <div class="question-count">5 Questions</div>
+                    <button class="btn-category">Select</button>
+                </div>
+
+                <div class="category-card" data-category="quantitative">
+                    <div class="category-icon">🔢</div>
+                    <h3>Quantitative Ability</h3>
+                    <p>Arithmetic, percentages, time-speed-distance</p>
+                    <div class="question-count">5 Questions</div>
+                    <button class="btn-category">Select</button>
+                </div>
+
+                <div class="category-card" data-category="verbal">
+                    <div class="category-icon">📝</div>
+                    <h3>Verbal Ability</h3>
+                    <p>Synonyms, antonyms, comprehension</p>
+                    <div class="question-count">5 Questions</div>
+                    <button class="btn-category">Select</button>
+                </div>
+
+                <div class="category-card" data-category="coding">
+                    <div class="category-icon">💻</div>
+                    <h3>Coding/Tech Aptitude</h3>
+                    <p>Programming logic, tech concepts</p>
+                    <div class="question-count">5 Questions</div>
+                    <button class="btn-category">Select</button>
+                </div>
+
+                <div class="category-card" data-category="personality">
+                    <div class="category-icon">👤</div>
+                    <h3>Personality & Interests</h3>
+                    <p>Soft skills, work preferences</p>
+                    <div class="question-count">10 Questions</div>
+                    <button class="btn-category">Select</button>
+                </div>
+            </div>
+
+            <button id="proceed-to-test" class="btn-primary" disabled>Proceed to Test</button>
+        </section>
+
+        <!-- Test Screen -->
+        <section id="test-screen" class="screen">
+            <div class="test-header">
+                <div class="test-info">
+                    <h2 id="current-category">Logical Reasoning</h2>
+                    <div class="progress-info">
+                        <span id="question-counter">Question 1 of 5</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="test-controls">
+                    <div class="timer" id="timer">02:00</div>
+                    <button id="hint-btn" class="btn-hint">💡 Hint</button>
+                    <button id="skip-btn" class="btn-skip">Skip</button>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="question" id="question-text">
+                    <!-- Question content will be loaded here -->
+                </div>
+                <div class="options" id="options-container">
+                    <!-- Options will be loaded here -->
+                </div>
+            </div>
+
+            <div class="test-navigation">
+                <button id="prev-question" class="btn-secondary" disabled>Previous</button>
+                <button id="next-question" class="btn-primary">Next Question</button>
+                <button id="submit-test" class="btn-submit" style="display: none;">Submit Test</button>
+            </div>
+        </section>
+
+        <!-- Results Screen -->
+        <section id="results-screen" class="screen">
+            <div class="results-header">
+                <h2>🎉 Assessment Complete!</h2>
+                <p>Here's your personalized performance analysis</p>
+            </div>
+
+            <div class="results-content">
+                <div class="score-overview">
+                    <div class="total-score">
+                        <h3>Overall Score</h3>
+                        <div class="score-circle">
+                            <span id="total-score">0</span>
+                            <span class="score-label">/100</span>
+                        </div>
+                    </div>
+                    <div class="points-earned">
+                        <h3>Points Earned</h3>
+                        <div class="points-display">
+                            <span id="points-earned">0</span>
+                            <span class="points-label">points</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-scores">
+                    <h3>Category-wise Performance</h3>
+                    <div class="scores-chart">
+                        <canvas id="performance-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="strengths">
+                        <h3>💪 Your Strengths</h3>
+                        <ul id="strengths-list"></ul>
+                    </div>
+                    <div class="weaknesses">
+                        <h3>🎯 Areas for Improvement</h3>
+                        <ul id="weaknesses-list"></ul>
+                    </div>
+                </div>
+
+                <div class="recommendations">
+                    <h3>🚀 Recommended Next Steps</h3>
+                    <div class="recommendation-cards" id="recommendations-container"></div>
+                </div>
+
+                <div class="blockchain-info">
+                    <h3>🔗 Blockchain Verification</h3>
+                    <p>Your assessment results have been securely recorded on the blockchain.</p>
+                    <div class="blockchain-hash">
+                        <span>Transaction Hash:</span>
+                        <code id="blockchain-hash">0x1234...5678</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-actions">
+                <button id="view-dashboard" class="btn-primary">View Dashboard</button>
+                <button id="retake-test" class="btn-secondary">Retake Test</button>
+                <button id="share-results" class="btn-secondary">Share Results</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Progress Indicator -->
+    <div id="floating-progress" class="floating-progress">
+        <div class="progress-circle">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            </svg>
+            <div class="progress-text">
+                <span id="progress-percentage">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="aptitude.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "aptitude": [
+    {
+      "category": "logical",
+      "questions": [
+        {
+          "question": "Find the next number: 2, 4, 8, 16, ?",
+          "options": ["18", "20", "32", "24"],
+          "answer": "32"
+        },
+        {
+          "question": "Which shape comes next in sequence?",
+          "options": ["Circle", "Square", "Triangle", "Rectangle"],
+          "answer": "Triangle"
+        }
+      ]
+    },
+    {
+      "category": "quantitative",
+      "questions": [
+        {
+          "question": "5 + 12 x 2 = ?",
+          "options": ["34", "29", "24", "32"],
+          "answer": "29"
+        },
+        {
+          "question": "What is 25% of 200?",
+          "options": ["25", "50", "75", "100"],
+          "answer": "50"
+        }
+      ]
+    },
+    {
+      "category": "verbal",
+      "questions": [
+        {
+          "question": "Synonym of 'Happy'?",
+          "options": ["Sad", "Joyful", "Angry", "Tired"],
+          "answer": "Joyful"
+        },
+        {
+          "question": "Antonym of 'Brave'?",
+          "options": ["Courageous", "Cowardly", "Bold", "Heroic"],
+          "answer": "Cowardly"
+        }
+      ]
+    },
+    {
+      "category": "tech",
+      "questions": [
+        {
+          "question": "HTML stands for?",
+          "options": ["Hyper Text Markup Language", "High Text Markup Language", "Hyperlink Text Mark Language", "None"],
+          "answer": "Hyper Text Markup Language"
+        },
+        {
+          "question": "Which is a programming language?",
+          "options": ["HTML", "CSS", "JavaScript", "HTTP"],
+          "answer": "JavaScript"
+        }
+      ]
+    }
+  ]
+}

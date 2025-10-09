@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Dashboard - One-Stop Career & Education Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-tachometer-alt"></i> Career Dashboard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="aptitude.html">Test</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="blockchain.html">Blockchain</a>
+                <a href="arvr.html">AR/VR</a>
+                <a href="#contact">Contact</a>
+                <a href="rewards.html">Rewards</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-profile">
+                    <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+                    <span id="user-name">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-container">
+        <!-- Overview Section -->
+        <section class="overview-section">
+            <div class="welcome-card">
+                <div class="welcome-content">
+                    <h2>Welcome back, <span id="welcome-name">Student</span>!</h2>
+                    <p>Track your progress and continue your career journey</p>
+                </div>
+                <div class="profile-section">
+                    <img id="main-profile-pic" src="https://via.placeholder.com/80" alt="Profile">
+                    <div class="profile-info">
+                        <h3 id="profile-name">Student Name</h3>
+                        <p id="profile-domain">Computer Science Student</p>
+                        <div class="grade-badge" id="grade-badge">Grade A</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card" data-animate="counter">
+                    <div class="stat-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-points">0</h3>
+                        <p>Total Points</p>
+                        <div class="stat-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0/1000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-animate="counter">
+                    <div class="stat-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="tests-completed">0</h3>
+                        <p>Tests Completed</p>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+2 this week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-animate="counter">
+                    <div class="stat-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="milestones-achieved">0</h3>
+                        <p>Milestones Achieved</p>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+1 today</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-card" data-animate="counter">
+                    <div class="stat-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="mentor-sessions">0</h3>
+                        <p>Mentor Sessions</p>
+                        <div class="stat-trend">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>+1 this month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Tracker Section -->
+        <section class="progress-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Progress Tracker</h2>
+                <div class="section-controls">
+                    <button class="btn-toggle" data-target="roadmap-progress">
+                        <i class="fas fa-route"></i> Roadmap
+                    </button>
+                    <button class="btn-toggle active" data-target="aptitude-progress">
+                        <i class="fas fa-brain"></i> Aptitude
+                    </button>
+                    <button class="btn-toggle" data-target="skills-progress">
+                        <i class="fas fa-cogs"></i> Skills
+                    </button>
+                </div>
+            </div>
+
+            <!-- Roadmap Progress -->
+            <div class="progress-content" id="roadmap-progress">
+                <div class="roadmap-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Complete Aptitude Assessment</h4>
+                            <p>Finished all 5 categories</p>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item completed">
+                        <div class="timeline-marker">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>AR/VR Career Simulation</h4>
+                            <p>Experience your dream job in VR</p>
+                            <span class="timeline-date">Completed</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item current">
+                        <div class="timeline-marker">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Mentor Session</h4>
+                            <p>Connect with industry expert</p>
+                            <span class="timeline-date">In Progress</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item upcoming">
+                        <div class="timeline-marker">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Blockchain Certification</h4>
+                            <p>Earn verified credentials</p>
+                            <span class="timeline-date">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aptitude Progress -->
+            <div class="progress-content active" id="aptitude-progress">
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3>Category Performance</h3>
+                        <canvas id="aptitude-radar-chart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3>Score Distribution</h3>
+                        <canvas id="aptitude-bar-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Progress -->
+            <div class="progress-content" id="skills-progress">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Technical Skills</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 75%"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 60%"></div>
+                                </div>
+                                <span class="skill-percentage">60%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Data Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 45%"></div>
+                                </div>
+                                <span class="skill-percentage">45%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Communication</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 80%"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Problem Solving</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 70%"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Leadership</span>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" style="width: 55%"></div>
+                                </div>
+                                <span class="skill-percentage">55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Recommendations Section -->
+        <section class="recommendations-section">
+            <div class="section-header">
+                <h2><i class="fas fa-robot"></i> AI Recommendations</h2>
+                <button class="btn-refresh" id="refresh-recommendations">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+            <div class="recommendations-grid" id="recommendations-container">
+                <!-- Recommendations will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Gamification & Rewards Section -->
+        <section class="gamification-section">
+            <div class="section-header">
+                <h2><i class="fas fa-trophy"></i> Gamification & Rewards</h2>
+                <a href="rewards.html" class="btn-primary">View All Rewards</a>
+            </div>
+            
+            <div class="gamification-content">
+                <div class="points-overview">
+                    <div class="points-circle">
+                        <div class="points-inner">
+                            <h3 id="current-points">0</h3>
+                            <p>Points Earned</p>
+                        </div>
+                        <svg class="points-ring" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        </svg>
+                    </div>
+                    <div class="points-breakdown">
+                        <div class="points-item">
+                            <span class="points-source">Aptitude Tests</span>
+                            <span class="points-amount">+150</span>
+                        </div>
+                        <div class="points-item">
+                            <span class="points-source">AR/VR Activities</span>
+                            <span class="points-amount">+75</span>
+                        </div>
+                        <div class="points-item">
+                            <span class="points-source">Mentor Sessions</span>
+                            <span class="points-amount">+50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="badges-section">
+                    <h3>Achievements & Badges</h3>
+                    <div class="badges-grid">
+                        <div class="badge earned">
+                            <i class="fas fa-brain"></i>
+                            <span>Aptitude Master</span>
+                        </div>
+                        <div class="badge earned">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <span>VR Explorer</span>
+                        </div>
+                        <div class="badge earned">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Mentor Connect</span>
+                        </div>
+                        <div class="badge locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Blockchain Pro</span>
+                        </div>
+                        <div class="badge locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Course Master</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mentor Section -->
+        <section class="mentor-section">
+            <div class="section-header">
+                <h2><i class="fas fa-user-graduate"></i> Suggested Mentors</h2>
+                <button class="btn-primary" id="find-mentors">Find More Mentors</button>
+            </div>
+            <div class="mentors-grid" id="mentors-container">
+                <!-- Mentors will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Recent Activities & Notifications -->
+        <section class="activities-section">
+            <div class="activities-layout">
+                <div class="recent-activities">
+                    <div class="section-header">
+                        <h2><i class="fas fa-history"></i> Recent Activities</h2>
+                        <button class="btn-secondary" id="view-all-activities">View All</button>
+                    </div>
+                    <div class="activities-feed" id="activities-feed">
+                        <!-- Activities will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="notifications-panel">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bell"></i> Notifications</h2>
+                        <button class="btn-secondary" id="mark-all-read">Mark All Read</button>
+                    </div>
+                    <div class="notifications-list" id="notifications-list">
+                        <!-- Notifications will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" id="fab-main">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-menu">
+            <button class="fab-item" data-action="start-test">
+                <i class="fas fa-clipboard-check"></i>
+                <span>Start Test</span>
+            </button>
+            <button class="fab-item" data-action="find-mentor">
+                <i class="fas fa-user-graduate"></i>
+                <span>Find Mentor</span>
+            </button>
+            <button class="fab-item" data-action="view-rewards">
+                <i class="fas fa-gift"></i>
+                <span>View Rewards</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

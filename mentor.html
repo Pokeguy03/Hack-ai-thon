@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentor Assignment - One-Stop Career & Education Advisor</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mentor.css" />
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-user-graduate"></i> Mentor Assignment</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="aptitude.html">Test</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="blockchain.html">Blockchain</a>
+        <a href="arvr.html">AR/VR</a>
+        <a href="#contact">Contact</a>
+        <a href="rewards.html">Rewards</a>
+        <a href="mentor.html" class="active">Mentor</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="user-profile">
+          <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+          <span id="user-name">Student</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero mentor-hero">
+    <div class="hero-content">
+      <h2 class="hero-title">
+        <span class="title-line">Connect with Experts.</span>
+        <span class="title-line">Accelerate Your Growth.</span>
+      </h2>
+      <p class="hero-subtitle">
+        Get personalized mentor recommendations based on your performance and interests
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MENTOR SECTION ===== -->
+  <section class="mentor-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>AI-Based Mentor Recommendation</h2>
+        <p>Get personalized mentor suggestions based on your performance and interests.</p>
+      </div>
+
+      <section id="mentorSuggestions" class="hidden">
+        <h3>🎯 Recommended Mentors</h3>
+        <div id="mentorCards" class="mentor-cards"></div>
+      </section>
+
+      <div class="mentor-form-container">
+        <form id="mentorForm" class="modern-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">
+                <i class="fas fa-user"></i>
+                Full Name
+              </label>
+              <input type="text" id="name" required placeholder="Enter your full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                <i class="fas fa-envelope"></i>
+                Email Address
+              </label>
+              <input type="email" id="email" required placeholder="your.email@example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="domain">
+                <i class="fas fa-code"></i>
+                Domain of Interest
+              </label>
+              <select id="domain" required>
+                <option value="">--Select Domain--</option>
+                <option value="AI/ML">🤖 AI / Machine Learning</option>
+                <option value="Web Development">💻 Web Development</option>
+                <option value="Cybersecurity">🔒 Cybersecurity</option>
+                <option value="Blockchain">⛓️ Blockchain</option>
+                <option value="AR/VR">🥽 AR / VR</option>
+                <option value="Data Science">📊 Data Science</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="performance">
+                <i class="fas fa-chart-line"></i>
+                Latest Score (0-100)
+              </label>
+              <input type="number" id="performance" min="0" max="100" required placeholder="85" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reason">
+              <i class="fas fa-lightbulb"></i>
+              Why are you interested in this domain?
+            </label>
+            <textarea id="reason" rows="4" placeholder="Share your motivation and career goals..." required></textarea>
+          </div>
+
+          <button type="button" class="btn-primary" id="suggestMentors">
+            <i class="fas fa-search"></i>
+            Find My Mentor
+          </button>
+        </form>
+      </div>
+
+      <div id="mentorResult" class="hidden">
+        <div class="success-card">
+          <h3>🎉 Mentor Assigned!</h3>
+          <p>Your mentor details have been sent to your registered email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-graduation-cap"></i> Career Advisor</h3>
+        <p>Empowering students with AI-powered career guidance and personalized learning experiences.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aptitude.html">Aptitude Test</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="arvr.html">AR/VR</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#help">Help Center</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> info@careeradvisor.ai</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 One-Stop Career & Education Advisor | Designed by Gurunath M</p>
+    </div>
+  </footer>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Theme Toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const icon = document.querySelector('#theme-toggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+   const mentorsData = {
+  "AI/ML": [
+    { name: "Dr. Priya Raman", rating: 95, level: "Expert", img: "https://randomuser.me/api/portraits/women/68.jpg" },
+    { name: "Mr. Nikhil Arora", rating: 85, level: "Intermediate", img: "https://randomuser.me/api/portraits/men/72.jpg" },
+    { name: "Ms. Kavya Menon", rating: 70, level: "Beginner", img: "https://randomuser.me/api/portraits/women/75.jpg" }
+  ],
+  "Web Development": [
+    { name: "Mr. Karthik S", rating: 90, level: "Expert", img: "https://randomuser.me/api/portraits/men/40.jpg" },
+    { name: "Ms. Divya Raj", rating: 80, level: "Intermediate", img: "https://randomuser.me/api/portraits/women/66.jpg" },
+    { name: "Mr. Arjun Thomas", rating: 70, level: "Beginner", img: "https://randomuser.me/api/portraits/men/55.jpg" }
+  ],
+  "Blockchain": [
+    { name: "Mr. Rahul Menon", rating: 93, level: "Expert", img: "https://randomuser.me/api/portraits/men/90.jpg" },
+    { name: "Ms. Aishwarya Iyer", rating: 78, level: "Intermediate", img: "https://randomuser.me/api/portraits/women/53.jpg" },
+    { name: "Mr. Sanjay Kapoor", rating: 65, level: "Beginner", img: "https://randomuser.me/api/portraits/men/51.jpg" }
+  ],
+  "AR/VR": [
+    { name: "Ms. Sneha Kumar", rating: 92, level: "Expert", img: "https://randomuser.me/api/portraits/women/91.jpg" },
+    { name: "Mr. Roshan Patel", rating: 80, level: "Intermediate", img: "https://randomuser.me/api/portraits/men/35.jpg" },
+    { name: "Ms. Nila Verma", rating: 72, level: "Beginner", img: "https://randomuser.me/api/portraits/women/47.jpg" }
+  ]
+};
+
+document.getElementById("suggestMentors").addEventListener("click", function () {
+  const domain = document.getElementById("domain").value;
+  const score = parseInt(document.getElementById("performance").value);
+  const reason = document.getElementById("reason").value.trim();
+
+  if (!domain || isNaN(score)) {
+    alert("Please fill domain and performance score.");
+    return;
+  }
+
+  // Simulate AI logic: pick mentor level based on score
+  let levelIndex = score >= 85 ? 0 : score >= 70 ? 1 : 2;
+  const selectedMentors = mentorsData[domain].slice(levelIndex);
+
+  const mentorCards = document.getElementById("mentorCards");
+  mentorCards.innerHTML = selectedMentors.map(m =>
+    `<div class="mentor-card">
+      <img src="${m.img}" alt="${m.name}">
+      <h3>${m.name}</h3>
+      <p>${m.level} Mentor</p>
+      <div class="rating-bar">
+        <div class="rating-fill" style="width: ${m.rating}%"></div>
+      </div>
+      <button class="select-btn" onclick="assignMentor('${m.name}', '${domain}', '${reason}')">Select Mentor</button>
+    </div>`
+  ).join("");
+
+  document.getElementById("mentorSuggestions").classList.remove("hidden");
+});
+
+function assignMentor(mentorName, domain, reason) {
+  document.getElementById("mentorSuggestions").classList.add("hidden");
+  document.getElementById("mentorForm").classList.add("hidden");
+  const result = document.getElementById("mentorResult");
+  result.classList.remove("hidden");
+
+  result.innerHTML = `
+    <h2>🎉 Mentor Assigned!</h2>
+    <p>You've been assigned <strong>${mentorName}</strong> as your mentor in <strong>${domain}</strong>.</p>
+    <p>Your interest: "${reason}"</p>
+  `;
+
+  if (typeof addPoints === "function") {
+    addPoints("Mentor Assigned (Performance-Based)", 40);
+  }
+}
+
+
+</script>
+</html>

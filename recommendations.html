@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Recommendations | Advisor</title>
+  <link rel="stylesheet" href="recommendations.css" />
+</head>
+
+<body class="recommendation-body">
+  <!-- ===== HEADER ===== -->
+  <header class="recommendation-header">
+    <h1>🎓 AI-Powered Career Recommendations</h1>
+    <nav class="recommendation-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="aptitude.html">Aptitude</a></li>
+        <li><a href="rewards.html" class="active">Rewards</a></li>
+        <li><a href="#" class="active">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN SECTION ===== -->
+  <section class="recommendation-section">
+    <h2>Your Personalized Career Paths</h2>
+    <p>Based on your skills, interests, and aptitude test results, our AI advisor suggests the most suitable career paths and relevant courses to help you grow professionally.</p>
+
+    <div class="recommendation-container" id="recommendationContainer">
+      <!-- Career cards will be injected by JS -->
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="recommendation-footer">
+    <p>© 2025 One-Stop Career & Education Advisor | Powered by AI + Blockchain</p>
+  </footer>
+
+  <script src="recommendations.js"></script>
+  <script src="gamification.js"></script>
+
+</body>
+<script>
+    // Sample AI-generated recommendations dataset
+const recommendations = [
+  {
+    title: "Software Engineer",
+    description: "Design and develop software applications. Requires strong coding and problem-solving skills.",
+    courses: ["Python Programming", "Data Structures & Algorithms", "Web Development", "Mobile App Development"]
+  },
+  {
+    title: "Data Scientist",
+    description: "Analyze complex data to extract insights. Strong in statistics, ML, and data visualization.",
+    courses: ["Python for Data Science", "Machine Learning", "Statistics", "Data Visualization with Tableau"]
+  },
+  {
+    title: "Cybersecurity Analyst",
+    description: "Protect systems and networks from cyber threats. Requires knowledge of security protocols and ethical hacking.",
+    courses: ["Network Security", "Ethical Hacking", "Cryptography", "Incident Response"]
+  },
+  {
+    title: "Digital Marketing Specialist",
+    description: "Plan and execute digital campaigns. Strong understanding of social media, SEO, and analytics required.",
+    courses: ["SEO Basics", "Social Media Marketing", "Content Strategy", "Google Analytics"]
+  }
+];
+
+// Function to populate recommendation cards
+function populateRecommendations() {
+  const container = document.getElementById("recommendationContainer");
+
+  recommendations.forEach(rec => {
+    const card = document.createElement("div");
+    card.classList.add("career-card");
+
+    card.innerHTML = `
+      <h3>${rec.title}</h3>
+      <p>${rec.description}</p>
+      <strong>Suggested Courses:</strong>
+      <ul>${rec.courses.map(course => `<li>${course}</li>`).join("")}</ul>
+      <button onclick="alert('Explore ${rec.title} roadmap')">Explore Path</button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Call the function on page load
+document.addEventListener("DOMContentLoaded", populateRecommendations);
+
+</script>
+</html>

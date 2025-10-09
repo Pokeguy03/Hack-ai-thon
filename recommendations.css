@@ -1,0 +1,153 @@
+/* ==== RECOMMENDATIONS PAGE CSS ==== */
+
+body.recommendation-body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  /* ==== HEADER ==== */
+  .recommendation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .recommendation-header h1 {
+    color: #00e0ff;
+    font-size: 1.8rem;
+  }
+  
+  .recommendation-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recommendation-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .recommendation-nav a:hover,
+  .recommendation-nav a.active {
+    color: #00e0ff;
+  }
+  
+  /* ==== MAIN SECTION ==== */
+  .recommendation-section {
+    padding: 70px 10%;
+    text-align: center;
+  }
+  
+  .recommendation-section h2 {
+    color: #00e0ff;
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .recommendation-section p {
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* ==== CAREER CARDS ==== */
+  .recommendation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .career-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 25px;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 224, 255, 0.2);
+  }
+  
+  .career-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  .career-card h3 {
+    color: #00d4ff;
+    margin-bottom: 10px;
+  }
+  
+  .career-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .career-card ul {
+    list-style: disc inside;
+    color: #ddd;
+    font-size: 0.9rem;
+  }
+  
+  .career-card button {
+    background: #00e0ff;
+    color: #111;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .career-card button:hover {
+    background: #fff;
+    color: #00e0ff;
+  }
+  
+  /* ==== FOOTER ==== */
+  .recommendation-footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 50px;
+  }
+  
+  /* ==== RESPONSIVE ==== */
+  @media (max-width: 768px) {
+    .recommendation-header,
+    .recommendation-nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .recommendation-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .career-card {
+      width: 95%;
+    }
+  }
+  

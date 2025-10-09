@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Verification - One-Stop Career & Education Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="blockchain.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-link"></i> Blockchain Verification</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="aptitude.html">Test</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="blockchain.html" class="active">Blockchain</a>
+                <a href="arvr.html">AR/VR</a>
+                <a href="#contact">Contact</a>
+                <a href="rewards.html">Rewards</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="user-profile">
+                    <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+                    <span id="user-name">Student</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="blockchain-network">
+                <div class="node" data-node="user" style="--delay: 0s; --x: 20%; --y: 30%;">
+                    <i class="fas fa-user"></i>
+                    <span>You</span>
+                </div>
+                <div class="node" data-node="points" style="--delay: 1s; --x: 50%; --y: 20%;">
+                    <i class="fas fa-coins"></i>
+                    <span>Points</span>
+                </div>
+                <div class="node" data-node="rewards" style="--delay: 2s; --x: 80%; --y: 30%;">
+                    <i class="fas fa-gift"></i>
+                    <span>Rewards</span>
+                </div>
+                <div class="node" data-node="mentors" style="--delay: 3s; --x: 50%; --y: 60%;">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Mentors</span>
+                </div>
+                <div class="node" data-node="achievements" style="--delay: 4s; --x: 20%; --y: 70%;">
+                    <i class="fas fa-trophy"></i>
+                    <span>Achievements</span>
+                </div>
+                <div class="node" data-node="certificates" style="--delay: 5s; --x: 80%; --y: 70%;">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certificates</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Secure.</span>
+                <span class="title-line">Transparent.</span>
+                <span class="title-line">Gamified.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Your career progress, points, and rewards tracked securely on blockchain
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary" id="view-ledger-btn">
+                    <i class="fas fa-book"></i>
+                    View My Blockchain Ledger
+                </button>
+                <button class="btn-secondary" id="learn-how-btn">
+                    <i class="fas fa-info-circle"></i>
+                    Learn How It Works
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2>How Blockchain Works in Our Platform</h2>
+            <p>Every action you take is securely recorded and verified on the blockchain</p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Complete Activities</h3>
+                    <p>Take aptitude tests, complete AR/VR simulations, and achieve milestones</p>
+                    <div class="step-visual">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Earn Points</h3>
+                    <p>Points are automatically calculated and stored securely on the blockchain</p>
+                    <div class="step-visual">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Smart Contracts Verify</h3>
+                    <p>Smart contracts automatically verify transactions and update your ledger</p>
+                    <div class="step-visual">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="step-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="step-content">
+                    <h3>Redeem Rewards</h3>
+                    <p>Use your points to redeem rewards, with all transactions recorded on blockchain</p>
+                    <div class="step-visual">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                </div>
+                <div class="step-number">4</div>
+            </div>
+            
+            <div class="step-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Track Everything</h3>
+                    <p>View your complete transaction history and verify all achievements</p>
+                    <div class="step-visual">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blockchain Ledger Section -->
+    <section class="ledger-section" id="ledger-section">
+        <div class="section-header">
+            <h2>Your Blockchain Ledger</h2>
+            <p>Complete transaction history and verification status</p>
+        </div>
+        
+        <div class="ledger-overview">
+            <div class="ledger-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-points">0</h3>
+                        <p>Total Points Earned</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="points-spent">0</h3>
+                        <p>Points Spent</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="available-points">0</h3>
+                        <p>Available Points</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="verified-transactions">0</h3>
+                        <p>Verified Transactions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ledger-content">
+            <div class="ledger-controls">
+                <div class="filter-tabs">
+                    <button class="tab-btn active" data-filter="all">All Transactions</button>
+                    <button class="tab-btn" data-filter="earned">Points Earned</button>
+                    <button class="tab-btn" data-filter="spent">Points Spent</button>
+                    <button class="tab-btn" data-filter="achievements">Achievements</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="transaction-search" placeholder="Search transactions...">
+                </div>
+            </div>
+            
+            <div class="transactions-table">
+                <div class="table-header">
+                    <div class="col">Type</div>
+                    <div class="col">Description</div>
+                    <div class="col">Points</div>
+                    <div class="col">Status</div>
+                    <div class="col">Date</div>
+                    <div class="col">Hash</div>
+                </div>
+                <div class="table-body" id="transactions-list">
+                    <!-- Transactions will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements & Rewards Section -->
+    <section class="achievements-section">
+        <div class="section-header">
+            <h2>Blockchain-Verified Achievements</h2>
+            <p>Your accomplishments secured on the blockchain</p>
+        </div>
+        
+        <div class="achievements-grid">
+            <div class="achievement-card verified">
+                <div class="achievement-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>Aptitude Master</h3>
+                    <p>Completed all aptitude test categories</p>
+                    <div class="achievement-meta">
+                        <span class="points">+150 points</span>
+                        <span class="status verified">
+                            <i class="fas fa-check-circle"></i>
+                            Verified
+                        </span>
+                    </div>
+                    <div class="blockchain-hash">
+                        <small>Hash: 0x1a2b3c4d5e6f...</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-card verified">
+                <div class="achievement-icon">
+                    <i class="fas fa-vr-cardboard"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>VR Explorer</h3>
+                    <p>Completed 3 AR/VR simulations</p>
+                    <div class="achievement-meta">
+                        <span class="points">+100 points</span>
+                        <span class="status verified">
+                            <i class="fas fa-check-circle"></i>
+                            Verified
+                        </span>
+                    </div>
+                    <div class="blockchain-hash">
+                        <small>Hash: 0x2b3c4d5e6f7a...</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-card verified">
+                <div class="achievement-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>Mentor Connect</h3>
+                    <p>Attended 5 mentor sessions</p>
+                    <div class="achievement-meta">
+                        <span class="points">+75 points</span>
+                        <span class="status verified">
+                            <i class="fas fa-check-circle"></i>
+                            Verified
+                        </span>
+                    </div>
+                    <div class="blockchain-hash">
+                        <small>Hash: 0x3c4d5e6f7a8b...</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-card pending">
+                <div class="achievement-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>Blockchain Pro</h3>
+                    <p>Complete blockchain certification</p>
+                    <div class="achievement-meta">
+                        <span class="points">+200 points</span>
+                        <span class="status pending">
+                            <i class="fas fa-clock"></i>
+                            Pending
+                        </span>
+                    </div>
+                    <div class="blockchain-hash">
+                        <small>Hash: Pending verification...</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo-section">
+        <div class="section-header">
+            <h2>Interactive Blockchain Demo</h2>
+            <p>Experience how blockchain transactions work in real-time</p>
+        </div>
+        
+        <div class="demo-container">
+            <div class="demo-steps">
+                <div class="demo-step active" id="step-1">
+                    <div class="step-content">
+                        <h3>Step 1: Complete a Test</h3>
+                        <p>Click the button below to simulate completing an aptitude test</p>
+                        <button class="demo-btn" id="complete-test-btn">
+                            <i class="fas fa-clipboard-check"></i>
+                            Complete Test
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="demo-step" id="step-2">
+                    <div class="step-content">
+                        <h3>Step 2: Points Earned</h3>
+                        <p>Points are automatically calculated and added to your blockchain ledger</p>
+                        <div class="points-animation">
+                            <span class="points-earned">+50 points</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-step" id="step-3">
+                    <div class="step-content">
+                        <h3>Step 3: Transaction Confirmed</h3>
+                        <p>Smart contract verifies and confirms the transaction on the blockchain</p>
+                        <div class="transaction-hash">
+                            <code>0x4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blockchain-visualization">
+                <div class="blockchain-chain">
+                    <div class="block" data-block="1">
+                        <div class="block-header">
+                            <span class="block-number">Block #1</span>
+                            <span class="block-time">2 min ago</span>
+                        </div>
+                        <div class="block-content">
+                            <div class="transaction">
+                                <span class="tx-type">Test Completion</span>
+                                <span class="tx-points">+50 points</span>
+                            </div>
+                        </div>
+                        <div class="block-hash">0x1a2b3c...</div>
+                    </div>
+                    
+                    <div class="block" data-block="2">
+                        <div class="block-header">
+                            <span class="block-number">Block #2</span>
+                            <span class="block-time">5 min ago</span>
+                        </div>
+                        <div class="block-content">
+                            <div class="transaction">
+                                <span class="tx-type">Reward Redemption</span>
+                                <span class="tx-points">-25 points</span>
+                            </div>
+                        </div>
+                        <div class="block-hash">0x2b3c4d...</div>
+                    </div>
+                    
+                    <div class="block" data-block="3">
+                        <div class="block-header">
+                            <span class="block-number">Block #3</span>
+                            <span class="block-time">10 min ago</span>
+                        </div>
+                        <div class="block-content">
+                            <div class="transaction">
+                                <span class="tx-type">Achievement Unlock</span>
+                                <span class="tx-points">+100 points</span>
+                            </div>
+                        </div>
+                        <div class="block-hash">0x3c4d5e...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Tools Section -->
+    <section class="verification-section">
+        <div class="section-header">
+            <h2>Verification Tools</h2>
+            <p>Verify your transactions and achievements on the blockchain</p>
+        </div>
+        
+        <div class="verification-tools">
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Transaction Verifier</h3>
+                <p>Enter a transaction hash to verify its authenticity on the blockchain</p>
+                <div class="tool-input">
+                    <input type="text" id="tx-hash-input" placeholder="Enter transaction hash...">
+                    <button class="verify-btn" id="verify-tx-btn">
+                        <i class="fas fa-check"></i>
+                        Verify
+                    </button>
+                </div>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Achievement Verifier</h3>
+                <p>Verify the authenticity of your achievements and certificates</p>
+                <button class="verify-btn" id="verify-achievements-btn">
+                    <i class="fas fa-shield-alt"></i>
+                    Verify All Achievements
+                </button>
+            </div>
+            
+            <div class="tool-card">
+                <div class="tool-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3>Export Ledger</h3>
+                <p>Download your complete blockchain ledger as a PDF or JSON file</p>
+                <div class="export-buttons">
+                    <button class="export-btn" id="export-pdf-btn">
+                        <i class="fas fa-file-pdf"></i>
+                        PDF
+                    </button>
+                    <button class="export-btn" id="export-json-btn">
+                        <i class="fas fa-file-code"></i>
+                        JSON
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Blockchain Verification</h3>
+                <p>Secure, transparent, and verifiable career progress tracking.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aptitude.html">Aptitude Test</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="rewards.html">Rewards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Blockchain Info</h4>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#ledger-section">View Ledger</a></li>
+                    <li><a href="#verification">Verify Transactions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 One-Stop Career & Education Advisor | Blockchain Powered</p>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="blockchain.js"></script>
+</body>
+</html>

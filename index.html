@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One-Stop Career & Education Advisor</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css">
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-graduation-cap"></i> Career & Education Advisor</h1>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="aptitude.html">Test</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="blockchain.html">Blockchain</a>
+        <a href="arvr.html">AR/VR</a>
+        <a href="#contact">Contact</a>
+        <a href="rewards.html">Rewards</a>
+      </nav>
+      <div class="header-controls">
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="user-profile">
+          <img id="profile-pic" src="https://via.placeholder.com/40" alt="Profile">
+          <span id="user-name">Student</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-background">
+      <div class="floating-elements">
+        <div class="floating-icon" style="--delay: 0s; --x: 10%; --y: 20%;">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div class="floating-icon" style="--delay: 1s; --x: 80%; --y: 30%;">
+          <i class="fas fa-vr-cardboard"></i>
+        </div>
+        <div class="floating-icon" style="--delay: 2s; --x: 20%; --y: 70%;">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="floating-icon" style="--delay: 3s; --x: 70%; --y: 80%;">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <div class="floating-icon" style="--delay: 4s; --x: 50%; --y: 10%;">
+          <i class="fas fa-code"></i>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <h2 class="hero-title">
+        <span class="title-line">Discover Your Path.</span>
+        <span class="title-line">Shape Your Future.</span>
+      </h2>
+      <p class="hero-subtitle">
+        Personalized career & education guidance powered by AI & Blockchain
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="location.href='dashboard.html'">
+          <i class="fas fa-rocket"></i>
+          Get Started
+        </button>
+        <button class="btn-secondary" onclick="location.href='aptitude.html'">
+          <i class="fas fa-clipboard-check"></i>
+          Take Aptitude Test
+        </button>
+        <button class="btn-demo" onclick="location.href='arvr.html'">
+          <i class="fas fa-vr-cardboard"></i>
+          AR/VR Demo
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-label">+ Students Guided</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-label">+ Mentors Onboarded</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="95">0</span>
+          <span class="stat-label">% Success Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features">
+    <div class="section-header">
+      <h2>Why Choose Our Platform?</h2>
+      <p>Comprehensive tools and features to accelerate your career journey</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Aptitude Tests</h3>
+        <p>Comprehensive assessments across 5 categories to identify your strengths and areas for improvement.</p>
+        <div class="feature-link">
+          <a href="aptitude.html">Take Test <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">
+          <i class="fas fa-route"></i>
+        </div>
+        <h3>Career Roadmaps</h3>
+        <p>Personalized career paths based on your test results and interests, with step-by-step guidance.</p>
+        <div class="feature-link">
+          <a href="dashboard.html">View Roadmap <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>AI Recommendations</h3>
+        <p>Smart course and career suggestions powered by advanced machine learning algorithms.</p>
+        <div class="feature-link">
+          <a href="dashboard.html">Get Recommendations <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h3>Mentor Connection</h3>
+        <p>Connect with industry experts and experienced professionals for personalized mentorship.</p>
+        <div class="feature-link">
+          <a href="dashboard.html">Find Mentor <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="feature-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3>Rewards Store</h3>
+        <p>Earn points through activities and redeem them for exciting perks and premium features.</p>
+        <div class="feature-link">
+          <a href="rewards.html">Explore Rewards <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+        <div class="feature-icon">
+          <i class="fas fa-vr-cardboard"></i>
+        </div>
+        <h3>AR/VR Simulations</h3>
+        <p>Immersive learning experiences that let you explore different careers in virtual reality.</p>
+        <div class="feature-link">
+          <a href="arvr.html">Try AR/VR <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS SECTION ===== -->
+  <section class="how-it-works">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>Simple steps to transform your career journey</p>
+    </div>
+    
+    <div class="steps-container">
+      <div class="step-item" data-aos="fade-right" data-aos-delay="100">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Take Aptitude Test</h3>
+          <p>Complete comprehensive assessments across multiple categories to understand your strengths.</p>
+        </div>
+        <div class="step-icon">
+          <i class="fas fa-clipboard-check"></i>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-left" data-aos-delay="200">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Earn Points & Badges</h3>
+          <p>Accumulate points through tests and activities, unlocking achievements along the way.</p>
+        </div>
+        <div class="step-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-right" data-aos-delay="300">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Get Personalized Roadmap</h3>
+          <p>Receive AI-generated career recommendations and personalized learning paths.</p>
+        </div>
+        <div class="step-icon">
+          <i class="fas fa-route"></i>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-left" data-aos-delay="400">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Connect with Mentors</h3>
+          <p>Find and connect with industry experts who can guide your career development.</p>
+        </div>
+        <div class="step-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+      </div>
+
+      <div class="step-item" data-aos="fade-right" data-aos-delay="500">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Redeem Rewards</h3>
+          <p>Use your earned points to access premium features, courses, and AR/VR experiences.</p>
+        </div>
+        <div class="step-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS SECTION ===== -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>Success Stories</h2>
+      <p>Hear from students who transformed their careers with our platform</p>
+    </div>
+    
+    <div class="testimonials-container">
+      <div class="testimonial-card active" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>"This platform completely changed my career trajectory. The AI recommendations helped me discover my passion for data science, and the mentor I connected with guided me to my dream job!"</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/60" alt="Sarah Chen">
+            <div class="author-info">
+              <h4>Sarah Chen</h4>
+              <span>Data Scientist at Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>"The AR/VR simulations were incredible! I got to experience what it's like to be a software engineer before making the career switch. The aptitude tests were spot-on with their recommendations."</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/60" alt="Michael Rodriguez">
+            <div class="author-info">
+              <h4>Michael Rodriguez</h4>
+              <span>Software Engineer at Microsoft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-content">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p>"The personalized roadmap and mentor connections were game-changers. I went from being unsure about my career to landing a senior position in just 6 months!"</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/60" alt="Lisa Thompson">
+            <div class="author-info">
+              <h4>Lisa Thompson</h4>
+              <span>Product Manager at Amazon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-nav">
+      <button class="nav-dot active" data-slide="0"></button>
+      <button class="nav-dot" data-slide="1"></button>
+      <button class="nav-dot" data-slide="2"></button>
+    </div>
+  </section>
+
+  <!-- ===== QUICK ACCESS SECTION ===== -->
+  <section class="quick-access">
+    <div class="section-header">
+      <h2>Quick Access</h2>
+      <p>Jump into your career journey with these essential tools</p>
+    </div>
+    
+    <div class="quick-access-grid">
+      <div class="access-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="access-icon">
+          <i class="fas fa-clipboard-check"></i>
+        </div>
+        <h3>Take Test</h3>
+        <p>Start your assessment</p>
+        <a href="aptitude.html" class="access-link">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="access-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="access-icon">
+          <i class="fas fa-route"></i>
+        </div>
+        <h3>View Roadmap</h3>
+        <p>See your career path</p>
+        <a href="dashboard.html" class="access-link">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="access-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="access-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>Recommendations</h3>
+        <p>Get AI suggestions</p>
+        <a href="dashboard.html" class="access-link">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="access-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="access-icon">
+          <i class="fas fa-vr-cardboard"></i>
+        </div>
+        <h3>Explore AR/VR</h3>
+        <p>Immersive experiences</p>
+        <a href="arvr.html" class="access-link">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="access-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="access-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3>Rewards</h3>
+        <p>Redeem your points</p>
+        <a href="rewards.html" class="access-link">
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="points-counter" id="points-counter" style="display: none;">
+      <div class="points-display">
+        <i class="fas fa-coins"></i>
+        <span>Your Points: <strong id="user-points">0</strong></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALL TO ACTION SECTION ===== -->
+  <section class="cta">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Career?</h2>
+      <p>Join thousands of students who have already discovered their path to success</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" onclick="location.href='dashboard.html'">
+          <i class="fas fa-rocket"></i>
+          Get Started Now
+        </button>
+        <button class="btn-outline" onclick="location.href='aptitude.html'">
+          <i class="fas fa-clipboard-check"></i>
+          Take Free Assessment
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3><i class="fas fa-graduation-cap"></i> Career Advisor</h3>
+        <p>Empowering students with AI-powered career guidance and personalized learning experiences.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="aptitude.html">Aptitude Test</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="arvr.html">AR/VR</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#help">Help Center</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> info@careeradvisor.ai</p>
+          <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 One-Stop Career & Education Advisor | Designed by Gurunath M</p>
+    </div>
+  </footer>
+
+  <!-- ===== CHATBOT WIDGET ===== -->
+  <!-- Floating Icon -->
+  <div id="chatbot-icon">
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712104.png" alt="Chatbot" />
+  </div>
+
+  <!-- Chatbot Box -->
+  <div id="chatbot-container">
+    <div id="chat-header">Career Mentor Bot</div>
+    <div id="chat-box"></div>
+    <div id="chat-input-area">
+      <input type="text" id="user-input" placeholder="Ask about career paths, skills, or education..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Theme Toggle
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const icon = document.querySelector('#theme-toggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    });
+
+    // Animate counters
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          counter.textContent = Math.floor(current);
+        }, 16);
+      });
+    }
+
+    // Testimonial slider
+    let currentSlide = 0;
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.nav-dot');
+
+    function showSlide(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Auto-rotate testimonials
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % testimonials.length;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Check if user is logged in and show points
+    function checkUserPoints() {
+      const userData = JSON.parse(localStorage.getItem('userData'));
+      if (userData && userData.totalPoints) {
+        document.getElementById('user-points').textContent = userData.totalPoints;
+        document.getElementById('points-counter').style.display = 'block';
+      }
+    }
+
+    // Modern Chatbot functionality
+    const API_KEY = "AIzaSyAD0_Ltxk-h2ixmw1TkmE6K0ELeyH_uHUU"; // Your Gemini API key
+    const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent";
+
+    const chatIcon = document.getElementById("chatbot-icon");
+    const chatContainer = document.getElementById("chatbot-container");
+    const chatBox = document.getElementById("chat-box");
+    const userInput = document.getElementById("user-input");
+    const sendBtn = document.getElementById("send-btn");
+
+    // Toggle chatbot visibility
+    chatIcon.addEventListener("click", () => {
+      chatContainer.style.display = chatContainer.style.display === "flex" ? "none" : "flex";
+    });
+
+    sendBtn.addEventListener("click", sendMessage);
+    userInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    function appendMessage(text, sender) {
+      const msg = document.createElement("div");
+      msg.classList.add("message", sender === "user" ? "user-message" : "bot-message");
+      msg.textContent = text;
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    async function sendMessage() {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      appendMessage(text, "user");
+      userInput.value = "";
+
+      appendMessage("Typing...", "bot");
+
+      try {
+        const res = await fetch(`${API_URL}?key=${API_KEY}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            contents: [{ 
+              parts: [{ 
+                text: `You are a concise career advisor. Student asks: "${text}". Give brief, actionable career guidance in 2-3 sentences max. Focus on: career paths, required skills, or next steps. Be direct and helpful.`
+              }] 
+            }]
+          }),
+        });
+
+        const data = await res.json();
+        
+        // Remove typing message
+        document.querySelectorAll(".bot-message").forEach(el => {
+          if (el.textContent === "Typing...") el.remove();
+        });
+
+        const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "I'm not sure I understood that.";
+        appendMessage(reply, "bot");
+
+      } catch (err) {
+        console.error(err);
+        // Remove typing message
+        document.querySelectorAll(".bot-message").forEach(el => {
+          if (el.textContent === "Typing...") el.remove();
+        });
+        appendMessage("⚠️ Error connecting to server. Please try again.", "bot");
+      }
+    }
+
+    // Initialize on load
+    window.addEventListener('load', () => {
+      animateCounters();
+      checkUserPoints();
+      
+      // Welcome message for chatbot
+      setTimeout(() => {
+        appendMessage("👋 Career guidance bot here. Ask about career paths, skills, or education options.", "bot");
+      }, 500);
+    });
+  </script>
+</body>
+</html>
