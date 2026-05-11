@@ -210,17 +210,18 @@ class BlockchainVerification {
         counters.forEach(counter => {
             const target = parseInt(counter.textContent);
             const duration = 2000;
-            const increment = target / (duration / 16);
-            let current = 0;
+            let startTimestamp = null;
             
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                counter.textContent = Math.floor(progress * target);
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
                 }
-                counter.textContent = Math.floor(current);
-            }, 16);
+            };
+            window.requestAnimationFrame(step);
         });
     }
 
